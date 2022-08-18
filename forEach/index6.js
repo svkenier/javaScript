@@ -12,14 +12,14 @@
 // "Indivisibilidades" -> 2 # 'i' ocurre siete veces y 's' ocurre dos veces 
 // "aA11" -> 2 # 'a' y '1' "ABBA" -> 2 # 'A' y 'B' cada uno ocurre dos veces
 
-const characterCounter = (str) => {
+const counterDuplicate = (str) => {
     const arr = str.split("")
     const obj = {}
     arr.forEach((el) => !obj[el] ? obj[el] = 1 : obj[el]++)
     return Object.values(obj).filter((item) => item > 1).length
 }
 
-console.log(characterCounter("Indivisibilidades"))
+console.log(counterDuplicate("Indivisibilidades"))
 
 /*
 converti el string de el parametro de la funcion de array de caracteres 
